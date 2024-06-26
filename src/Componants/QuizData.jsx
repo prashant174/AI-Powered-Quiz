@@ -3,18 +3,21 @@ import React, { useState } from 'react'
 import { motion } from 'framer-motion';
 import axios from 'axios';
 import { toast } from 'react-toastify';
+import {Hourglass } from 'react-loader-spinner'
 
 
 
 const QuizData = ({ questions, techStack, difficulty }) => {
   const [selectedOptions, setSelectedOptions] = useState({});
   const [score, setScore] = useState(null);
+  const [loadingQuiz,setLoadingQuiz]=useState(false)
 
   const handleOptionChange = (questionId, option) => {
       setSelectedOptions(prev => ({ ...prev, [questionId]: option }));
   };
 
   const handleSubmit = async () => {
+    setLoadingQuiz(true)
       let correctAnswers = 0;
       for (const question of questions) {
           const response = await axios.post('https://codeconverter1.onrender.com/submitQuestion', {
@@ -29,6 +32,7 @@ const QuizData = ({ questions, techStack, difficulty }) => {
           if (response.data.isCorrect) correctAnswers++;
       }
       setScore(correctAnswers);
+      setLoadingQuiz(false)
       toast('Quiz submited successfully')
   };
 
@@ -50,6 +54,7 @@ const QuizData = ({ questions, techStack, difficulty }) => {
                 <RadioGroup
                   value={selectedOptions[question._id] || ''}
                   onChange={(e) => handleOptionChange(question._id, e.target.value)}
+                  
                 >
                   {question.options.map((option, i) => (
                     <FormControlLabel key={i} value={option} control={<Radio />} label={option} />
@@ -66,7 +71,15 @@ const QuizData = ({ questions, techStack, difficulty }) => {
           onClick={handleSubmit}
           sx={{ mt: 2, backgroundColor: 'rgba(45, 239, 145, 0.901)' }}
         >
-          Submit Quiz
+         {loadingQuiz ? <Hourglass
+  visible={loadingQuiz}
+  height="17"
+  width="80"
+  ariaLabel="hourglass-loading"
+  wrapperStyle={{}}
+  wrapperClass=""
+  colors={['white', 'white']}
+  /> : 'SubmitQuiz'}
         </Button>
         {score !== null && (
           <Typography variant="h6" align="center" sx={{ mt: 4, color: 'rgba(45, 239, 145, 0.901)' }}>

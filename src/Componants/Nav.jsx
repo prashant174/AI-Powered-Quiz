@@ -63,6 +63,9 @@ const Nav = () => {
            <Tooltip title="AI Powered Quiz">
           <Typography sx={{cursor:'pointer',minWidth: 100 }} onClick={()=>usenavigate("/quiz")} > Quiz </Typography>
            </Tooltip>
+           <Tooltip title="AI Powered DSA Quiz">
+          <Typography sx={{cursor:'pointer',minWidth: 100 }} onClick={()=>usenavigate("/dsaQuestionsList")} > DSA </Typography>
+           </Tooltip>
       </Box>
 
      <Logo src={AnimatedImage} />

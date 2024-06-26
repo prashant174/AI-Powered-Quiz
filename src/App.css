@@ -4,11 +4,13 @@
     
 }
 
-#googleBtn{
+
+
+/* #googleBtn{
     align-self: auto;
     background-color: rgba(40, 242, 245, 0.988);
     border: 1px solid red;
-}
+} */
 
 
 /* #QuizDiv{
@@ -72,40 +74,33 @@
 }
 
 
-/* 
-#quizForm{
-    
-    width: 20%;
-    margin-top: 20px;
-    margin-left: 20px;
-    box-sizing: border-box;
-    border-radius: 10px;
-color: black;
-padding: 20px;
-align-items: center;
-justify-content: center;
-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
-#quizForm input,select{
-    width: 100%;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    padding: 10px 5px 10px 5px;
-    border-radius: 5px;
-    border: none;
-    background-color: rgb(245, 237, 237);
-}
-#quizForm button{
-    width: 100%;
-    padding: 10px 0px 10px 0px;
-    border-radius: 5px;
-    border: none;
-    background-color: rgb(71, 248, 71);
-    color: white;
-    font-size: large;
-    cursor: pointer;
-} */
+/* ******************************************************* */
 
-/* #testing{
-  background-color: rgba(210, 219, 210, 0.078);
-} */
+#resultDisplay {
+  border: 1px solid #ccc;
+    padding: 10px;
+    margin-top: 20px;
+    white-space: pre-wrap; /* This ensures that long lines will wrap */
+    word-wrap: break-word; /* This handles word wrapping */
+    background-color: #f9f9f9; /* Light background color for better readability */
+    border-radius: 5px; /* Rounded corners for a better look */
+    max-height: 300px; /* Set a maximum height */
+    overflow-y: auto; /* Adds vertical scrollbar if content exceeds max height */
+    overflow-x: hidden; /* Prevents horizontal scrollbar */
+    font-family: 'Courier New', Courier, monospace; /* Monospaced font for better code display */
+    box-shadow: 5px 4px 5px rgba(16, 216, 176, 0.8); /* Subtle shadow for better visual separation */
+min-height: 250px;
+}
+
+#model-content{
+  border: 1px solid red;
+  width: 400px;
+  margin: auto;
+  height: fit-content;
+  border-radius: 10px;
+}
+
+#closeBtn{
+  /* color: black; */
+  background-color: red;
+}

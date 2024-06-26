@@ -3,8 +3,10 @@ import React from 'react'
 const ResultDisplay = ({result}) => {
   return (
     <>
-    <h2>Output Code</h2>
+    <div id='resultDisplay'>
     <pre>{result.output}</pre>
+    </div>
+   
     </>
   )
 }

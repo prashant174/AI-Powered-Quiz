@@ -1,10 +1,10 @@
 import React from 'react'
 import {GlobalStyles} from "../Componants/GlobalStyles"
 import ParticleBackground from '../Componants/ParticleBackground';
-import { FaCode, FaBug, FaCheck } from 'react-icons/fa';
+import { FaCode, FaBug, FaCheck, FaLightbulb, FaPhoneAlt } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { Button, FeatureCard, FeatureDescription, FeatureIcon, FeatureTitle, FeaturesContainer, FooterContainer, FooterText, GetStartedButton, HeaderContainer, Subtitle, Title } from '../Styled/welcomePageStyle';
-
+import { MdOutlineMail } from "react-icons/md";
 
 
 const WelcomePage = () => {
@@ -73,10 +73,25 @@ const WelcomePage = () => {
         </FeatureDescription>
        
       </FeatureCard>
+
+      <FeatureCard
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+      >
+        <FeatureIcon><FaLightbulb /></FeatureIcon>
+        <FeatureTitle>AI Code Suggestions</FeatureTitle>
+        <FeatureDescription>
+        Get intelligent code suggestions to improve your coding efficiency and creativity.
+        </FeatureDescription>
+       
+      </FeatureCard>
+
     </FeaturesContainer>
     <FooterContainer>
-      <FooterText>© 2024 AI Code Wizard. All rights reserved to PNG Pvt. Ltd. </FooterText>
-      <FooterText>submit your feedback here </FooterText>
+      <FooterText>© 2024 AI Code Wizard. </FooterText>
+      
+      <FooterText><a href="https://forms.gle/8vVdXiPCVYNEdUoy7" target="_blank" rel="noopener noreferrer">submit</a>  your feedback here </FooterText>
+      <FooterText><FaPhoneAlt/> 8299625919 | <MdOutlineMail /> yprashant174@gmail.com </FooterText>
     </FooterContainer>
     </>
   )

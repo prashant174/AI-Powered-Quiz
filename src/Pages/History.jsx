@@ -68,7 +68,7 @@ const History = () => {
              <Button variant="contained" color="primary" onClick={() => navigate('/quiz')}>
            Back to Quiz
          </Button>
-          <Typography variant='h5' align='center' sx={{ mt: 4 }}>
+          <Typography variant='h5' align='center' sx={{ mt: 4,color:"aqua" }}>
             No quiz history available.
           </Typography>
           
