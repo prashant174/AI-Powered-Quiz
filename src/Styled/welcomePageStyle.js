@@ -54,12 +54,15 @@ const GetStartedButton = styled(motion.button)`
 `;
 
 const FeaturesContainer = styled.section`
+  margin:auto;
   padding: 40px 20px;
-//   background-color: #0d1117;
+  // background-color: #0d1117;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   flex: 1;
+  // border:1px solid red;
+  width:80%;
 `;
 
 const FeatureCard = styled(motion.div)`
@@ -108,6 +111,10 @@ width:80%;
 const FooterText = styled.p`
   color: #8b949e;
 `;
+
+// *************************
+
+
 
 export {
     Button, 
